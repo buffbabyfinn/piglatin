@@ -11,13 +11,19 @@ describe('latinAy', function() {
   it("takes two consonants at the beginning of a word and moves them to the end.", function(){
     expect(latinAy("chair")).to.equal("airchay");
   });
-
 });
-describe("vowelPosition", function(){
-  it("returns true if the specified position is a vowel", function(){
-    expect(vowelPosition("giraffe", 1)).to.equal(true);
-  });
-  it("returns false when the specified position is not a vowel" , function(){
-    expect(vowelPosition("giraffe", 0)).to.equal(false);
+
+// describe("consonantPosition", function(){
+//   it("returns true if the specified position is a consonant", function(){
+//     expect(consonantPosition("giraffe", 1)).to.equal(false);
+//   });
+//   it("returns false when the specified position is a consonant" , function(){
+//     expect(consonantPosition("giraffe", 0)).to.equal(true);
+//   });
+// });
+
+describe("firstVowel", function(){
+  it("finds the first vowel in a word, returns position of first vowel", function() {
+    expect(firstVowel("beaurocracy")).to.equal(1);
   });
 });
